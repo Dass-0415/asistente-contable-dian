@@ -432,7 +432,6 @@ class PlantillaOut(BaseModel):
     id: str
     empresa_id: str
     nombre: str
-    tipo_persona: str
     sistema_contable: str
     delimitador: str
     extension: str
