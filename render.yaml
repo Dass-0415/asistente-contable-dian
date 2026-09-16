@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: asistente-contable-dian
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /salud
+    envVars:
+      # La base productiva está en Neon. DATABASE_URL se administra como
+      # variable secreta directamente en Render y no se versiona en GitHub.
+      - key: DATABASE_URL
+        sync: false
